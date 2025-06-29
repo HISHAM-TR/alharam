@@ -1,0 +1,16 @@
+/* تم تحديث ملف CSS الرئيسي لإزالة الإعدادات التي تتعارض مع Tailwind CSS */
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* تعريفات خاصة للاتجاه RTL */
+.rtl-flip {
+  transform: scaleX(-1);
+}
+
+/* تخصيص لعناصر الأيقونات في الاتجاه RTL */
+.rtl-icon {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}

@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* تخصيص الخطوط واتجاه النص للواجهة العربية */
+@layer base {
+  html {
+    direction: rtl;
+    font-family: "Tajawal", "Noto Sans Arabic", system-ui, sans-serif;
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+    background-color: theme('colors.gray.50');
+    color: theme('colors.gray.800');
+    font-family: "Tajawal", "Noto Sans Arabic", system-ui, sans-serif;
+  }
+  
+  #root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
+
+/* تعريف الألوان الأساسية للتطبيق */
+:root {
+  --primary-color: #19647e;
+  --secondary-color: #28afb0;
+  --accent-color: #f4d35e;
+  --background-color: #f4f7fa;
+  --text-color: #1e3d58;
+}
+
+/* تخصيصات إضافية للعناصر في اتجاه RTL */
+@layer components {
+  .rtl-grid {
+    direction: rtl;
+  }
+  
+  .icon-flip-rtl {
+    transform: scaleX(-1);
+  }
+  
+  .ml-auto-rtl {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  
+  .mr-auto-rtl {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
